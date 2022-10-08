@@ -12,7 +12,7 @@
       bordered
     >
       <a href="https://mypikpak.com/" target="_blank" class="logo-box">
-        <img src="https://mypikpak.com/apple-touch-icon.png" class="logo-box__icon" alt="">
+       <img src="https://mypikpak.com/apple-touch-icon.png" class="logo-box__icon" alt="">
         <div class="logo-box__text">PikPak</div>
       </a>
       <n-menu :options="menuOptions" :value="String(route.name)" @update:value="goRoute"></n-menu>
@@ -27,14 +27,14 @@
           :color="vipInfo?.status === 'ok' ? '#d1ae6a' : undefined"
           processing>
         </n-progress>
-        <p style="margin-bottom: 0;">
-          <n-tooltip :width="600" placement="right">
+       <p style="margin-bottom: 0;">
+          <n-tooltip placement="right">
               <template #trigger>
-                <a style="color: #306eff;" target="_blank" href="https://k.youshop10.com/JGDtoxg6">2021年12月23日~2021年12月31日￥119购体验会员VIP年卡</a>
+                <a style="color: #306eff;" target="_blank" href="https://www.tjsky.net/?p=220#i-21">文件列表刷不出来？</a>
               </template>
-              2021年12月23日~2021年12月31日 【1年PikPak体验会员仅售：119元！原价450元】 2022年1月1日起： 1年PikPak体验会员仅售：169元！原价450元】 -每人只能购买使用一次，官方代理商分销，感谢支持
+               【请依次点选：设置-代理设置-恢复默认-保存设置 后再刷新试试】 
           </n-tooltip>
-        </p>
+       </p>
       </div>
       <div class="sider-bottom" v-if="!collapsed" :class="{vip: vipInfo?.status === 'ok'}">
         <div class="bottom-user-info">
@@ -75,10 +75,6 @@
         </n-icon>
       </template>
       <n-input placeholder="会员码" v-model:value="code"></n-input>
-      <p>
-        <a style="color: #306eff;" target="_blank" href="https://k.youshop10.com/JGDtoxg6">【0.33元/天】PikPak体验会员VIP年卡-可与7天免费会员码叠加-每人只能购买使用一次，感谢支持</a>
-      </p>
-
       <template #action>
         <n-button :block="true" type="primary" :disabled="!code" @click="postCode">添加</n-button>
       </template>
@@ -90,7 +86,7 @@
 import { ref } from '@vue/reactivity';
 import { h, onMounted, watch } from '@vue/runtime-core';
 import { NLayout, NLayoutSider, NLayoutContent, NMenu, MenuOption, NIcon, NProgress, NText, NModal, NCard, NInput, NButton, NScrollbar, NTime, NTooltip, useDialog } from 'naive-ui'
-import { File, Trash, CircleX, Logout, Settings, Copy, Video, Camera } from '@vicons/tabler'
+import { File, Trash, CircleX, Logout, Settings, Share, Copy, Video, Camera } from '@vicons/tabler'
 import http from '../../utils/axios'
 import { byteConvert } from '../../utils'
 import { useRoute, useRouter } from 'vue-router'
@@ -126,11 +122,11 @@ import { useRoute, useRouter } from 'vue-router'
       key: 'invited',
       icon: renderIcon(Copy)
     },
-    // {
-    //   label: '资源库',
-    //   key: 'share',
-    //   icon: renderIcon(Share)
-    // },
+//    {
+//      label: '资源库',
+//      key: 'share',
+//      icon: renderIcon(Share)
+//    },
     {
       label: '设置',
       key: 'setting',

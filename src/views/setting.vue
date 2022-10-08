@@ -1,6 +1,6 @@
 <template>
   <div class="list-page">
-    <n-collapse :default-expanded-names="['-1', '0', '2', '3']">
+    <n-collapse :default-expanded-names="['-1', '0', '2', '3','4']">
       <n-collapse-item name="-1" >
         <template #header>
           绑定telegram   <a @click.stop="" href="https://www.tjsky.net/?p=220#Telegram" target="_blank"> <n-icon style="vertical-align: middle;" size="20" color="#d03050"><zoom-question></zoom-question></n-icon> </a>
@@ -65,9 +65,17 @@
         <n-space>
           <a href="https://mypikpak.com/" target="_blank" class="n-button">官方网站</a>
           <a href="https://t.me/pikpak_userservice" target="_blank" class="n-button">官方交流群</a>
-          <a href="https://github.com/mumuchenchen/pikpak" target="_blank" class="n-button">开源仓库</a>
+          <a href="https://github.com/tjsky/pikpak" target="_blank" class="n-button">开源仓库</a>
           <a href="https://www.tjsky.net/?p=201" target="_blank" class="n-button">部署教程</a>
-          <a href="https://t.me/mumuchenchen" target="_blank">问题反馈</a>
+          <a href="https://t.me/pikpak_userservice" target="_blank">问题反馈</a>
+        </n-space>
+        <br />
+      </n-collapse-item>
+       <n-collapse-item title="PC端IDM支持" name="4">
+        <n-space>
+          <a href="https://github.com/MotooriKashin/ef2/releases" target="_blank" class="n-button">地址一：下载支持插件</a>
+          <a href="https://url71.ctfile.com/f/21226171-531688310-489b35" target="_blank" class="n-button">地址二：下载支持插件（密码pikpak）</a>
+          <a href="https://www.tjsky.net/?p=220#PCIDM" target="_blank" class="n-button">使用教程</a><br>先用第一个下载地址，如果你实在无法访问github再使用第二个下载地址，调用IDM下载需要配合“自定义菜单”功能实现，请查看上方的使用教程        
         </n-space>
         <br />
       </n-collapse-item>
